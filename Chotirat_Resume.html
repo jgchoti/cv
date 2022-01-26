@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👩🏾‍💻 Chotirat Jonggrit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        --red: #f29191;
+        --green: #94d0cc;
+        --gray: rgb(200, 198, 198);
+        --pink: #f4a9a8;
+
+        --header-font: "Righteous", Arial, sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: linear-gradient(120deg, #eeeeee 0%, #ebedee 100%);
+      }
+      h1 {
+        margin: 0 auto 0 auto;
+        color: var(--red);
+        padding: 40px;
+        font-family: "Righteous", sans-serif;
+        font-size: 75px;
+        font-weight: 100;
+        text-align: right;
+      }
+      h2 {
+        color: var(--green);
+        font-family: "Righteous", Arial, sans-serif;
+        font-size: 60px;
+        font-weight: 100;
+      }
+      h3 {
+        font-weight: bolder;
+        color: var(--red);
+        font-size: 18px;
+      }
+      h4 {
+        font-weight: lighter;
+        color: var(--gray);
+        font-size: 15px;
+      }
+
+      button {
+        text-align: center;
+        font-size: 28px;
+        color: white;
+        font-family: monospace;
+        padding: 15px 20px;
+        border-radius: 20px;
+        box-shadow: 4px 3px 2px 1px #eec4c4;
+        border: 2px solid #eec4c4;
+        background: #eec4c4;
+        margin: 100px auto;
+        display: block;
+        transition: all 1s ease-out;
+      }
+      button:hover {
+        background: white;
+        color: #eec4c4;
+        cursor: pointer;
+      }
+      hr {
+        background: linear-gradient(to right, #fdfbfb, rgb(200, 198, 198));
+        height: 5px;
+      }
+      a:link {
+        color: var(--gray);
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: var(--gray);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--red);
+      }
+
+      nav {
+        margin: 140px auto 0 auto;
+        position: sticky;
+        padding: 20px;
+        top: 0;
+        background-color: white;
+      }
+      article {
+        margin-bottom: 50px;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: var(--green);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: monospace;
+      }
+      input[type="submit"]:hover {
+        background-color: white;
+        color: var(--green);
+        border: 2px solid var(--green);
+        font-family: monospace;
+      }
+
+      .contact-container {
+        margin: 0 50px 0 50px;
+        border-radius: 5px;
+        background-color: white;
+        padding: 20px;
+        font-size: 16px;
+        color: var(--gray);
+      }
+      .txt-wrap {
+        color: rgb(200, 198, 198);
+        font-family: monospace;
+        font-size: 35px;
+        opacity: 0.7;
+        margin: 50px 20px;
+        font-weight: lighter;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 12px 12px 2px 1px rgb(200, 198, 198, 0.2);
+      }
+      nav,
+      .scroll-container {
+        display: block;
+        text-align: center;
+      }
+
+      .scroll-container {
+        width: 800px;
+        scroll-behavior: smooth;
+        font-family: monospace;
+      }
+      .scroll-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        padding-top: 30px;
+      }
+
+      .choti-profile {
+        margin: 0 200px 40px 15px;
+      }
+      .choti-lastname {
+        color: var(--green);
+        font-family: "Righteous", Arial, sans-serif;
+        font-size: 60px;
+        font-weight: 100;
+      }
+      .choti-photo {
+        border-radius: 50% 20% / 10% 40%;
+        float: left;
+        box-shadow: 12px 12px 2px 1px var(--green);
+        margin: 25px 50px 50px 20px;
+        filter: grayscale(60%);
+      }
+
+      .txt-rotate {
+        color: #f4a9a8;
+      }
+      .icon-bio {
+        margin-left: 10px;
+        margin-right: 40px;
+      }
+      .date {
+        font-weight: lighter;
+        color: var(--green);
+      }
+
+      .skill-container {
+        width: 500px;
+        /* float: right; */
+        margin: 0 50px 0 50px;
+        background-color: rgba(204, 204, 204, 0.137);
+      }
+      .skills {
+        text-align: right; /* Right-align text */
+        padding-top: 10px; /* Add top padding */
+        padding-bottom: 10px; /* Add bottom padding */
+        color: var(--pink); /* White text color */
+        font-family: monospace;
+        font-size: 15px;
+      }
+      .thai {
+        width: 100%;
+        background-color: var(--green);
+      }
+      .english {
+        width: 80%;
+        background-color: var(--green);
+        opacity: 0.6;
+      }
+      .dutch {
+        width: 55%;
+        background-color: var(--green);
+        opacity: 0.2;
+      }
+
+      .contact-info {
+        text-align: left;
+        font-family: monospace;
+        font-size: 20px;
+        opacity: 0.6;
+        font-weight: normal;
+        display: block;
+        margin-top: 0;
+      }
+      .contact-logo {
+        float: left;
+        padding: 0 30px 0 250px;
+        border-radius: 5px;
+        text-decoration: none;
+        width: 30px;
+        text-decoration: none;
+      }
+      .footer {
+        text-align: center;
+        font-family: monospace;
+        font-size: 16px;
+        opacity: 0.6;
+        font-weight: normal;
+        margin: 10px auto 25px auto;
+        display: block;
+      }
+      .link-logo {
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 0 30px 0 30px;
+        opacity: 0.8;
+        border-radius: 20px;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Chotirat<br />
+        <span class="choti-lastname">Jonggrit</span>
+      </h1>
+      <div class="choti-profile">
+        <img
+          class="choti-photo"
+          src="choti_photo.jpg"
+          alt="chotirat_photo"
+          width="300px"
+        />
+      </div>
+
+      <p class="txt-wrap">
+        Hi! I'm
+        <span
+          class="txt-rotate"
+          data-period="2000"
+          data-rotate='[ "Choti.", "Thai.", "living in Belgium.", "learning to code."]'
+        ></span>
+      </p>
+      <a href="./CV_Chotirat_EN_2022.pdf" download="CV_Chotirat_EN_2022"
+        ><button class="download-button">Download My CV</button></a
+      >
+      <nav>
+        <a class="icon-bio" href="#experience"
+          ><img src="icon_work.png" alt="experience" width="50px"
+        /></a>
+        <a class="icon-bio" href="#education"
+          ><img src="icon_education.png" alt="education" width="50px"
+        /></a>
+        <a class="icon-bio" href="#language"
+          ><img src="icon_language.png" alt="language" width="50px"
+        /></a>
+        <a class="icon-bio" href="#contact"
+          ><img src="icon_contact.png" alt="contact" width="50px"
+        /></a>
+      </nav>
+      <div class="scroll-container">
+        <div class="scroll-page" id="experience">
+          <h2>Work Experience</h2>
+        </div>
+        <div>
+          <article>
+            <h3>
+              Member Relations Executive
+              <span class="date">Nov 2019 - Apr 2020</span>
+            </h3>
+            <h4>🇹🇭 PACIFIC ASIA TRAVEL ASSOCIATION (PATA)(THAILAND)</h4>
+          </article>
+          <article>
+            <h3>
+              Assistant Finance Manager
+              <span class="date">Nov 2015 - Sep 2016</span>
+            </h3>
+            <h4>🇲🇾 AVANI SEPANG GOLDCOAST RESORT, SEPANG (MALAYSIA)</h4>
+          </article>
+          <article>
+            <h3>
+              Management Trainee
+              <span class="date">Apr 2015 - Nov 2015</span>
+            </h3>
+            <h4>🇲🇻 HUVAFEN FUSHI RESORT (MALDIVES)</h4>
+          </article>
+          <article>
+            <h3>
+              Food And Beverage Trainee
+              <span class="date">May 2014 - Nov 2014</span>
+            </h3>
+            <h4>🇬🇧 COPTHORNE HOTEL LONDON GATWICK (UNITED KINGDOM)</h4>
+          </article>
+          <article>
+            <h3>
+              Marketing Communication and CRM officer
+              <span class="date">Sep 2012 - Dec 2012</span>
+            </h3>
+            <h4>🇹🇭 BUDDY GROUP HOTELS & RESORTS (THAILAND)</h4>
+          </article>
+        </div>
+        <div class="scroll-page" id="education"><h2>Education</h2></div>
+        <div>
+          <article>
+            <h3>
+              European Master in Tourism Management
+              <span class="date">Sep 2017 - Sep 2019</span>
+            </h3>
+            <h4>
+              🇩🇰 🇸🇮 🇪🇸 A Joint Master'S Degree From UNIVERSITY OF SOUTHERN
+              DENMARK (DENMARK), UNIVERSITY OF LJUBLJANA (SLOVENIA), AND
+              UNIVERSITY OF GIRONA (SPAIN)
+            </h4>
+            <h4>
+              📝 The master thesis in
+              <a
+                href="https://www.dropbox.com/s/jtpl6od606uxc6k/Chotirat_Thesis_Summary.pdf?dl=0"
+                target="_blank"
+              >
+                “Sufficiency Economy Philosophy <br />and Sustainable Tourism:
+                The case of Thailand”
+              </a>
+            </h4>
+          </article>
+          <article>
+            <h3>
+              Master’s Degree in International Business in Hotel, Resort and Spa
+              Management
+              <span class="date">Feb 2013 - Nov 2014</span>
+            </h3>
+            <h4>🇨🇭 SWISS HOTEL MANAGEMENT SCHOOL (SWITZERLAND)</h4>
+          </article>
+          <article>
+            <h3>
+              Bachelor’s Degree in Business Administration
+              <span class="date">May 2008 - Apr 2012</span>
+            </h3>
+            <h4>🇹🇭 THAMMASAT UNIVERSITY (THAILAND)</h4>
+            <h4>Finance (Major) and Real Estates Management (Minor)</h4>
+          </article>
+        </div>
+        <div class="scroll-page" id="language"><h2>Language</h2></div>
+        <div>
+          <h3>Thai (native)</h3>
+          <h3>English (fluent)</h3>
+          <h3>Dutch (learning)</h3>
+        </div>
+        <div class="scroll-page" id="contact"><h2>Contact</h2></div>
+        <div>
+          <img class="" src="icon_email.png" alt="email" />
+          <h4 class="">jgchotirat@gmail.com</h4>
+          <br />
+          <img class="" src="icon_location.png" alt="location"/ >
+          <h4 class="">Based in Antwerp, Belgium</h4>
+          <br />
+          <a
+            class="link-logo"
+            href="https://www.instagram.com/jgchoti/"
+            target="_blank"
+          >
+            <img
+              src="icon_instagram.png"
+              alt="instagram"
+              width="40px"
+              height="40px"
+            />
+          </a>
+          <a
+            class="link-logo"
+            href="https://www.linkedin.com/in/chotirat/"
+            target="_blank"
+          >
+            <img
+              src="icon_linkedin.png"
+              alt="linkedin"
+              width="40px"
+              height="40px"
+            />
+          </a>
+          <br />
+          <h3>or leave me a message ...</h3>
+          <article>
+            <div class="contact-container">
+              <form action="action_page.php">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                />
+                <label for="email">E-Mail</label>
+                <input type="text" placeholder="Your E-mail" name="subject" />
+                <label for="subject">Message</label>
+                <textarea
+                  id="textmessage"
+                  name="textmessage"
+                  placeholder="Write something.."
+                  style="height: 100px"
+                ></textarea>
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+      <span class="footer"> 👩🏾‍💻 This page was built By Choti J. © 2022 </span>
+    </div>
+    <script>
+      var TxtRotate = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtRotate.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+
+      window.onload = function () {
+        var elements = document.getElementsByClassName("txt-rotate");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-rotate");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtRotate(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML =
+          ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+      };
+    </script>
+  </body>
+</html>
