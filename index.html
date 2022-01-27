@@ -21,6 +21,7 @@
         --green: #94d0cc;
         --gray: rgb(200, 198, 198);
         --pink: #f4a9a8;
+        --white: white;
 
         --header-font: "Righteous", Arial, sans-serif;
       }
@@ -61,7 +62,7 @@
       button {
         text-align: center;
         font-size: 28px;
-        color: white;
+        color: var(--white);
         font-family: monospace;
         padding: 15px 20px;
         border-radius: 20px;
@@ -73,14 +74,11 @@
         transition: all 1s ease-out;
       }
       button:hover {
-        background: white;
+        background: var(--white);
         color: var(--red);
         cursor: pointer;
       }
-      hr {
-        background: linear-gradient(to right, #fdfbfb, rgb(200, 198, 198));
-        height: 5px;
-      }
+
       a:link {
         color: var(--gray);
         text-decoration: none;
@@ -100,7 +98,7 @@
         position: sticky;
         padding: 20px;
         top: 0;
-        background-color: white;
+        background-color: var(--white);
       }
       article {
         margin-bottom: 50px;
@@ -120,7 +118,7 @@
 
       input[type="submit"] {
         background-color: var(--green);
-        color: white;
+        color: var(--white);
         padding: 12px 20px;
         border: none;
         border-radius: 4px;
@@ -128,7 +126,7 @@
         font-family: monospace;
       }
       input[type="submit"]:hover {
-        background-color: white;
+        background-color: var(--white);
         color: var(--green);
         border: 2px solid var(--green);
         font-family: monospace;
@@ -137,13 +135,13 @@
       .contact-container {
         margin: 0 50px 0 50px;
         border-radius: 5px;
-        background-color: white;
+        background-color: var(--white);
         padding: 20px;
         font-size: 16px;
         color: var(--gray);
       }
       .txt-wrap {
-        color: rgb(200, 198, 198);
+        color: var(--gray);
         font-family: monospace;
         font-size: 35px;
         opacity: 0.7;
@@ -203,35 +201,6 @@
       .date {
         font-weight: lighter;
         color: var(--green);
-      }
-
-      .skill-container {
-        width: 500px;
-        /* float: right; */
-        margin: 0 50px 0 50px;
-        background-color: rgba(204, 204, 204, 0.137);
-      }
-      .skills {
-        text-align: right; /* Right-align text */
-        padding-top: 10px; /* Add top padding */
-        padding-bottom: 10px; /* Add bottom padding */
-        color: var(--pink); /* White text color */
-        font-family: monospace;
-        font-size: 15px;
-      }
-      .thai {
-        width: 100%;
-        background-color: var(--green);
-      }
-      .english {
-        width: 80%;
-        background-color: var(--green);
-        opacity: 0.6;
-      }
-      .dutch {
-        width: 55%;
-        background-color: var(--green);
-        opacity: 0.2;
       }
 
       .contact-info {
