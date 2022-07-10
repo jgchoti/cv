@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .title {
+            margin: 0 auto 0 auto;
+            color: #C8B6E2;
+            font-family: monospace;
+            font-size: 80px;
+            text-shadow: 2px 2px white;
+            font-weight: 100;
+            text-align: center;
+            padding: 40px;
+        }
+        .first-space {
+            width: 150px;
+            height: auto;
+            display: inline-block;
+        }
+        .space {
+            width: 4px;
+            height: auto;
+            display: inline-block;
+        }
+
+        body {
+            background: linear-gradient(120deg, #7A86B6 0%, #495C83 100%);}
+
+        button {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            font-family: monospace;
+            padding: 15px 20px;
+            border-radius: 20px;
+            box-shadow: 4px 3px 2px 1px deeppink;
+            border: 2px solid deeppink;
+            background: deeppink;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 1s ease-out;
+        }
+        button:hover {
+            background: white;
+            color: deeppink;
+            cursor: pointer;
+        }
+        textarea {
+            height: 250px;
+            width:  800px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: monospace;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="title">Case Converter</div>
+<div><textarea id="text"></textarea></div>
+<div class="first-space"></div>
+<button id="upper-case">Upper Case</button>
+<div class="space"></div>
+<button id="lower-case">Lower Case</button>
+<div class="space"></div>
+<button id="proper-case">Proper Case</button>
+<div class="space"></div>
+<button id="sentence-case">Sentence Case</button>
+<div class="space"></div>
+<button id="save-text-file">Save Text File</button>
+<div class="space"></div>
+<script>
+
+document.getElementById("upper-case").addEventListener("click", function (){
+    let text = document.getElementById("text").value;
+    document.getElementById("text").value = text.toUpperCase();
+})
+
+document.getElementById("lower-case").addEventListener("click", function (){
+    let text = document.getElementById("text").value;
+    document.getElementById("text").value = text.toLowerCase();
+})
+
+document.getElementById("proper-case").addEventListener("click", function (){
+    let text = document.getElementById("text").value;
+    document.getElementById("text").value = text.toLowerCase().split(' ')
+        .map(word => word[0].toUpperCase() + word.substring(1))
+        .join(' ');
+})
+
+document.getElementById("sentence-case").addEventListener("click", function (){
+    let text = document.getElementById("text").value;
+    document.getElementById("text").value = text.toLowerCase().split('. ')
+        .map(sentence => sentence[0].toUpperCase() + sentence.substring(1))
+        .join('. ');
+})
+document.getElementById("save-text-file").addEventListener("click", function (){
+    let text = document.getElementById("text").value;
+    let filename = "text.txt";
+    function download(filename, text) {
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
+// Start file download.
+    download("text.txt", text );
+})
+
+</script>
+</body>
+</html>
