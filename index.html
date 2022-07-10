@@ -198,9 +198,8 @@
       .icon-bio {
         margin-left: 10px;
         margin-right: 40px;
-
       }
- 
+
       .date {
         font-weight: lighter;
         color: var(--green);
@@ -240,6 +239,11 @@
         border-radius: 20px;
         background-color: transparent;
       }
+      .portfolio__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
@@ -269,19 +273,11 @@
         ><button class="download-button">Download My CV</button></a
       >
       <nav>
-        <a
-            class="icon-bio"
-            href="#portfolio" /><img
-            src="icons-portfolio.png"
-            alt="portfolio"
-            width="60px"
-        /></a>
-        <a
-            class="icon-bio"
-            href="#experience" /><img
-            src="icon_work.png"
-            alt="experience"
-            width="50px"
+        <a class="icon-bio" href="#portfolio">
+          <img src="icons-portfolio.png" alt="portfolio" width="60px" />
+        </a>
+        <a class="icon-bio" href="#experience">
+          <img src="icon_work.png" alt="experience" width="50px"
         /></a>
         <a class="icon-bio" href="#education"
           ><img src="icon_education.png" alt="education" width="50px"
@@ -294,11 +290,19 @@
         /></a>
       </nav>
       <div class="scroll-container">
-          <div class="scroll-page" id="portfolio"><h2>Portfolio</h2></div>
+        <div class="scroll-page" id="portfolio"><h2>Portfolio</h2></div>
         <div>
-          <a href="case-converter.html"><h3><img src="font_download.png" alt="font_download" width="50px"
-        />       Case Converter</h3></a>
-         
+          <a href="case-converter.html">
+            <h3 class="portfolio__item">
+              <img
+                src="font_download.png"
+                alt="font_download"
+                width="50px"
+                height="50px"
+              />
+              Case Converter
+            </h3>
+          </a>
         </div>
         <div class="scroll-page" id="experience">
           <h2>Work Experience</h2>
@@ -389,10 +393,10 @@
         <div class="scroll-page" id="contact"><h2>Contact</h2></div>
         <div>
           <img src="icon_email.png" alt="email" />
-          <h4 >jgchotirat@gmail.com</h4>
+          <h4>jgchotirat@gmail.com</h4>
           <br />
-          <img  src="icon_location.png" alt="location"/ >
-          <h4 >Based in Antwerp, Belgium</h4>
+          <img src="icon_location.png" alt="location"/ >
+          <h4>Based in Antwerp, Belgium</h4>
           <br />
           <a
             class="link-logo"
