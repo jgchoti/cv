@@ -11,240 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      :root {
-        --red: #f29191;
-        --green: #94d0cc;
-        --gray: rgb(200, 198, 198);
-        --pink: #f4a9a8;
-        --white: white;
-
-        --header-font: "Righteous", Arial, sans-serif;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        background: linear-gradient(120deg, #eeeeee 0%, #ebedee 100%);
-      }
-      h1 {
-        margin: 0 auto 0 auto;
-        color: var(--red);
-        padding: 40px;
-        font-family: "Righteous", sans-serif;
-        font-size: 75px;
-        font-weight: 100;
-        text-align: right;
-      }
-      h2 {
-        color: var(--green);
-        font-family: "Righteous", Arial, sans-serif;
-        font-size: 60px;
-        font-weight: 100;
-      }
-      h3 {
-        font-weight: bolder;
-        color: var(--red);
-        font-size: 18px;
-      }
-      h4 {
-        font-weight: lighter;
-        color: var(--gray);
-        font-size: 15px;
-      }
-
-      button {
-        text-align: center;
-        font-size: 28px;
-        color: var(--white);
-        font-family: monospace;
-        padding: 15px 20px;
-        border-radius: 20px;
-        box-shadow: 4px 3px 2px 1px var(--red);
-        border: 2px solid var(--red);
-        background: var(--red);
-        margin: 100px auto;
-        display: block;
-        transition: all 1s ease-out;
-      }
-      button:hover {
-        background: var(--white);
-        color: var(--red);
-        cursor: pointer;
-      }
-
-      a:link {
-        color: var(--gray);
-        text-decoration: none;
-      }
-
-      a:visited {
-        color: var(--gray);
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: var(--red);
-      }
-
-      nav {
-        margin: 140px auto 0 auto;
-        position: sticky;
-        padding: 20px;
-        top: 0;
-        background-color: var(--white);
-      }
-      article {
-        margin-bottom: 50px;
-      }
-      input[type="text"],
-      select,
-      textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-      }
-
-      input[type="submit"] {
-        background-color: var(--green);
-        color: var(--white);
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-family: monospace;
-      }
-      input[type="submit"]:hover {
-        background-color: var(--white);
-        color: var(--green);
-        border: 2px solid var(--green);
-        font-family: monospace;
-      }
-
-      .contact-container {
-        margin: 0 50px 0 50px;
-        border-radius: 5px;
-        background-color: var(--white);
-        padding: 20px;
-        font-size: 16px;
-        color: var(--gray);
-      }
-      .txt-wrap {
-        color: var(--gray);
-        font-family: monospace;
-        font-size: 35px;
-        opacity: 0.7;
-        margin: 50px 20px;
-        font-weight: lighter;
-      }
-      .container {
-        max-width: 800px;
-        margin: auto;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 12px 12px 2px 1px rgb(200, 198, 198, 0.2);
-      }
-      nav,
-      .scroll-container {
-        display: block;
-        text-align: center;
-      }
-
-      .scroll-container {
-        max-width: 800px;
-        scroll-behavior: smooth;
-        font-family: monospace;
-      }
-      .scroll-page {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 15px;
-        padding-top: 30px;
-      }
-
-      .choti-profile {
-        margin: 0 200px 40px 15px;
-      }
-      .choti-lastname {
-        color: var(--green);
-        font-family: "Righteous", Arial, sans-serif;
-        font-size: 60px;
-        font-weight: 100;
-      }
-      .choti-photo {
-        border-radius: 50% 20% / 10% 40%;
-        float: left;
-        box-shadow: 12px 12px 2px 1px var(--green);
-        margin: 25px 50px 50px 20px;
-        filter: grayscale(60%);
-      }
-
-      .txt-rotate {
-        color: var(--pink);
-      }
-      .icon-bio {
-        margin-left: 10px;
-        margin-right: 40px;
-      }
-
-      .date {
-        font-weight: lighter;
-        color: var(--green);
-      }
-
-      /* .contact-info {
-        text-align: left;
-        font-family: monospace;
-        font-size: 20px;
-        opacity: 0.6;
-        font-weight: normal;
-        display: block;
-        margin-top: 0;
-      }
-      .contact-logo {
-        float: left;
-        padding: 0 30px 0 250px;
-        border-radius: 5px;
-        text-decoration: none;
-        width: 30px;
-        text-decoration: none;
-      } */
-      .footer {
-        text-align: center;
-        font-family: monospace;
-        font-size: 16px;
-        opacity: 0.6;
-        font-weight: normal;
-        margin: 10px auto 25px auto;
-        display: block;
-      }
-      .link-logo {
-        border-radius: 5px;
-        text-decoration: none;
-        padding: 0 30px 0 30px;
-        opacity: 0.8;
-        border-radius: 20px;
-        background-color: transparent;
-      }
-      .portfolio__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
+    <link rel="stylesheet" href="src/index.css" />
   </head>
   <body>
     <div class="container">
@@ -255,7 +22,7 @@
       <div class="choti-profile">
         <img
           class="choti-photo"
-          src="choti_photo.jpg"
+          src="image/choti_photo.jpg"
           alt="chotirat_photo"
           width="300px"
         />
@@ -275,19 +42,19 @@
       <!-- icon section -->
       <nav>
         <a class="icon-bio" href="#portfolio">
-          <img src="icons-portfolio.png" alt="portfolio" width="60px" />
+          <img src="icon/icons-portfolio.png" alt="portfolio" width="60px" />
         </a>
         <a class="icon-bio" href="#experience">
-          <img src="icon_work.png" alt="experience" width="50px"
+          <img src="icon/icon_work.png" alt="experience" width="50px"
         /></a>
         <a class="icon-bio" href="#education"
-          ><img src="icon_education.png" alt="education" width="50px"
+          ><img src="icon/icon_education.png" alt="education" width="50px"
         /></a>
         <a class="icon-bio" href="#language"
-          ><img src="icon_language.png" alt="language" width="50px"
+          ><img src="icon/icon_language.png" alt="language" width="50px"
         /></a>
         <a class="icon-bio" href="#contact"
-          ><img src="icon_contact.png" alt="contact" width="50px"
+          ><img src="icon/icon_contact.png" alt="contact" width="50px"
         /></a>
       </nav>
       <!-- End of icon section -->
@@ -299,7 +66,7 @@
           <a href="case-converter.html">
             <h3 class="portfolio__item">
               <img
-                src="font_download.png"
+                src="icon/font_download.png"
                 alt="font_download"
                 width="50px"
                 height="50px"
@@ -404,10 +171,10 @@
         <!-- contact section -->
         <div class="scroll-page" id="contact"><h2>Contact</h2></div>
         <div>
-          <img src="icon_email.png" alt="email" />
+          <img src="icon/icon_email.png" alt="email" />
           <h4>jgchotirat@gmail.com</h4>
           <br />
-          <img src="icon_location.png" alt="location"/ >
+          <img src="icon/icon_location.png" alt="location"/ >
           <h4>Based in Antwerp, Belgium</h4>
           <br />
           <a
@@ -416,7 +183,7 @@
             target="_blank"
           >
             <img
-              src="icon_instagram.png"
+              src="icon/icon_instagram.png"
               alt="instagram"
               width="40px"
               height="40px"
@@ -428,7 +195,7 @@
             target="_blank"
           >
             <img
-              src="icon_linkedin.png"
+              src="icon/icon_linkedin.png"
               alt="linkedin"
               width="40px"
               height="40px"
@@ -466,66 +233,6 @@
       </div>
       <span class="footer"> 👩🏾‍💻 This page was built By Choti J. © 2022 </span>
     </div>
-    <script>
-      var TxtRotate = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = "";
-        this.tick();
-        this.isDeleting = false;
-      };
-
-      TxtRotate.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-        var that = this;
-        var delta = 300 - Math.random() * 100;
-
-        if (this.isDeleting) {
-          delta /= 2;
-        }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === "") {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-
-        setTimeout(function () {
-          that.tick();
-        }, delta);
-      };
-
-      window.onload = function () {
-        var elements = document.getElementsByClassName("txt-rotate");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-rotate");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            new TxtRotate(elements[i], JSON.parse(toRotate), period);
-          }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML =
-          ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-        document.body.appendChild(css);
-      };
-    </script>
+    <script src="src/index.js"></script>
   </body>
 </html>
