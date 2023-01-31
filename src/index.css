@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #f29191;
+  --green: #94d0cc;
+  --gray: rgb(200, 198, 198);
+  --pink: #f4a9a8;
+  --white: white;
+
+  --header-font: "Righteous", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(120deg, #eeeeee 0%, #ebedee 100%);
+}
+h1 {
+  margin: 0 auto 0 auto;
+  color: var(--red);
+  padding: 40px;
+  font-family: "Righteous", sans-serif;
+  font-size: 75px;
+  font-weight: 100;
+  text-align: right;
+}
+h2 {
+  color: var(--green);
+  font-family: "Righteous", Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+}
+h3 {
+  font-weight: bolder;
+  color: var(--red);
+  font-size: 18px;
+}
+h4 {
+  font-weight: lighter;
+  color: var(--gray);
+  font-size: 15px;
+}
+
+button {
+  text-align: center;
+  font-size: 28px;
+  color: var(--white);
+  font-family: monospace;
+  padding: 15px 20px;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px 1px var(--red);
+  border: 2px solid var(--red);
+  background: var(--red);
+  margin: 100px auto;
+  display: block;
+  transition: all 1s ease-out;
+}
+button:hover {
+  background: var(--white);
+  color: var(--red);
+  cursor: pointer;
+}
+
+a:link {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--red);
+}
+
+nav {
+  margin: 140px auto 0 auto;
+  position: sticky;
+  padding: 20px;
+  top: 0;
+  background-color: var(--white);
+}
+article {
+  margin-bottom: 50px;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: monospace;
+}
+input[type="submit"]:hover {
+  background-color: var(--white);
+  color: var(--green);
+  border: 2px solid var(--green);
+  font-family: monospace;
+}
+
+.contact-container {
+  margin: 0 50px 0 50px;
+  border-radius: 5px;
+  background-color: var(--white);
+  padding: 20px;
+  font-size: 16px;
+  color: var(--gray);
+}
+.txt-wrap {
+  color: var(--gray);
+  font-family: monospace;
+  font-size: 35px;
+  opacity: 0.7;
+  margin: 50px 20px;
+  font-weight: lighter;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 12px 12px 2px 1px rgb(200, 198, 198, 0.2);
+}
+nav,
+.scroll-container {
+  display: block;
+  text-align: center;
+}
+
+.scroll-container {
+  max-width: 800px;
+  scroll-behavior: smooth;
+  font-family: monospace;
+}
+.scroll-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  padding-top: 30px;
+}
+
+.choti-profile {
+  margin: 0 200px 40px 15px;
+}
+.choti-lastname {
+  color: var(--green);
+  font-family: "Righteous", Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+}
+.choti-photo {
+  border-radius: 50% 20% / 10% 40%;
+  float: left;
+  box-shadow: 12px 12px 2px 1px var(--green);
+  margin: 25px 50px 50px 20px;
+  filter: grayscale(60%);
+}
+
+.txt-rotate {
+  color: var(--pink);
+}
+.icon-bio {
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.date {
+  font-weight: lighter;
+  color: var(--green);
+}
+
+/* .contact-info {
+        text-align: left;
+        font-family: monospace;
+        font-size: 20px;
+        opacity: 0.6;
+        font-weight: normal;
+        display: block;
+        margin-top: 0;
+      }
+      .contact-logo {
+        float: left;
+        padding: 0 30px 0 250px;
+        border-radius: 5px;
+        text-decoration: none;
+        width: 30px;
+        text-decoration: none;
+      } */
+.footer {
+  text-align: center;
+  font-family: monospace;
+  font-size: 16px;
+  opacity: 0.6;
+  font-weight: normal;
+  margin: 10px auto 25px auto;
+  display: block;
+}
+.link-logo {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0 30px 0 30px;
+  opacity: 0.8;
+  border-radius: 20px;
+  background-color: transparent;
+}
+.portfolio__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
